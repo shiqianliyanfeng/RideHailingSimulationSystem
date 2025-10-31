@@ -1,0 +1,17 @@
+simulation:
+  duration_hours: 24
+  time_step_sec: 10
+  dispatch_interval_sec: 60
+  random_seed: 42
+
+data:
+  vehicles_csv: "data/vehicles.csv"
+  orders_csv: "data/orders.csv"
+
+scheduler:
+  strategy: "km"  # options: km, nearest
+  max_match_distance_km: 20.0
+
+output:
+  logs_dir: "logs"
+  out_dir: "output"
