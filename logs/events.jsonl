@@ -1,70 +1,30 @@
-{"time": 839.2152297042926, "event": "order_arrival", "oid": 13}
-{"time": 840.0, "event": "assigned", "vid": 4, "oid": 13, "eta": 1658.8130784399305}
-{"time": 1266.038831368763, "event": "order_arrival", "oid": 27}
-{"time": 1320.0, "event": "assigned", "vid": 2, "oid": 27, "eta": 1108.1631520893357}
-{"time": 2428.1631520893357, "event": "pickup", "vid": 2, "oid": 27, "wait": 1162.1243207205725, "trip_eta": 4215.880294542463}
-{"time": 2498.8130784399305, "event": "pickup", "vid": 4, "oid": 13, "wait": 1659.5978487356379, "trip_eta": 5937.711437157048}
-{"time": 2754.43945578223, "event": "order_arrival", "oid": 45}
-{"time": 2760.0, "event": "assigned", "vid": 7, "oid": 45, "eta": 873.4254669869217}
-{"time": 2983.7122621777075, "event": "order_arrival", "oid": 15}
-{"time": 3633.4254669869215, "event": "pickup", "vid": 7, "oid": 45, "wait": 878.9860112046913, "trip_eta": 5906.313702129133}
-{"time": 3688.399271103623, "event": "order_arrival", "oid": 36}
-{"time": 4176.512595990202, "event": "order_arrival", "oid": 42}
-{"time": 4200.0, "event": "assigned", "vid": 6, "oid": 42, "eta": 1658.1518052581232}
-{"time": 5261.704354381963, "event": "order_arrival", "oid": 18}
-{"time": 5489.480252500521, "event": "order_arrival", "oid": 16}
-{"time": 5520.0, "event": "assigned", "vid": 0, "oid": 16, "eta": 742.3881864156347}
-{"time": 5858.151805258123, "event": "pickup", "vid": 6, "oid": 42, "wait": 1681.6392092679216, "trip_eta": 4988.47532998191}
-{"time": 6262.388186415635, "event": "pickup", "vid": 0, "oid": 16, "wait": 772.907933915114, "trip_eta": 2581.0231830786424}
-{"time": 7602.824126428523, "event": "order_arrival", "oid": 21}
-{"time": 7620.0, "event": "assigned", "vid": 3, "oid": 21, "eta": 1494.6716415912574}
-{"time": 7841.807770261954, "event": "order_arrival", "oid": 38}
-{"time": 9114.671641591258, "event": "pickup", "vid": 3, "oid": 21, "wait": 1511.8475151627345, "trip_eta": 9103.805101814814}
-{"time": 9332.810213702887, "event": "order_arrival", "oid": 30}
-{"time": 10392.35210944486, "event": "order_arrival", "oid": 32}
-{"time": 10440.0, "event": "assigned", "vid": 8, "oid": 32, "eta": 1517.6532868221577}
-{"time": 11957.653286822158, "event": "pickup", "vid": 8, "oid": 32, "wait": 1565.3011773772978, "trip_eta": 3327.58952158508}
-{"time": 13739.833048333514, "event": "order_arrival", "oid": 44}
-{"time": 21384.345601176945, "event": "order_arrival", "oid": 43}
-{"time": 22936.083740156555, "event": "order_arrival", "oid": 11}
-{"time": 22980.0, "event": "assigned", "vid": 1, "oid": 11, "eta": 1550.9677788137888}
-{"time": 24473.080581230744, "event": "order_arrival", "oid": 7}
-{"time": 24530.96777881379, "event": "pickup", "vid": 1, "oid": 11, "wait": 1594.8840386572338, "trip_eta": 1787.6177192393145}
-{"time": 25890.33668222331, "event": "order_arrival", "oid": 28}
-{"time": 25920.0, "event": "assigned", "vid": 5, "oid": 28, "eta": 1292.6465379248962}
-{"time": 26372.54908338318, "event": "order_arrival", "oid": 6}
-{"time": 27212.646537924895, "event": "pickup", "vid": 5, "oid": 28, "wait": 1322.3098557015837, "trip_eta": 2432.5485873110815}
-{"time": 29335.27883179144, "event": "order_arrival", "oid": 12}
-{"time": 31899.962144438963, "event": "order_arrival", "oid": 14}
-{"time": 32260.301888333463, "event": "order_arrival", "oid": 22}
-{"time": 32389.824398419823, "event": "order_arrival", "oid": 39}
-{"time": 34081.93939750228, "event": "order_arrival", "oid": 17}
-{"time": 36096.41646127753, "event": "order_arrival", "oid": 35}
-{"time": 39139.9560639709, "event": "order_arrival", "oid": 40}
-{"time": 41022.23461320745, "event": "order_arrival", "oid": 8}
-{"time": 47204.32175391539, "event": "order_arrival", "oid": 49}
-{"time": 49990.8301732416, "event": "order_arrival", "oid": 25}
-{"time": 50370.34205836811, "event": "order_arrival", "oid": 5}
-{"time": 50407.53562170276, "event": "order_arrival", "oid": 3}
-{"time": 51025.77740166582, "event": "order_arrival", "oid": 23}
-{"time": 51446.97600088672, "event": "order_arrival", "oid": 4}
-{"time": 51480.0, "event": "assigned", "vid": 9, "oid": 4, "eta": 660.3686127670711}
-{"time": 52140.36861276707, "event": "pickup", "vid": 9, "oid": 4, "wait": 693.3926118803502, "trip_eta": 9768.19455484094}
-{"time": 54177.113767245726, "event": "order_arrival", "oid": 2}
-{"time": 55559.53111603581, "event": "order_arrival", "oid": 31}
-{"time": 60313.939471059064, "event": "order_arrival", "oid": 29}
-{"time": 60690.17600012929, "event": "order_arrival", "oid": 37}
-{"time": 61487.53723333834, "event": "order_arrival", "oid": 19}
-{"time": 62644.02278258802, "event": "order_arrival", "oid": 26}
-{"time": 63536.53820574965, "event": "order_arrival", "oid": 48}
-{"time": 65212.41279319537, "event": "order_arrival", "oid": 10}
-{"time": 67891.11727275686, "event": "order_arrival", "oid": 33}
-{"time": 68780.9184701128, "event": "order_arrival", "oid": 1}
-{"time": 70066.06668334843, "event": "order_arrival", "oid": 24}
-{"time": 71100.04535279484, "event": "order_arrival", "oid": 9}
-{"time": 72462.11746151253, "event": "order_arrival", "oid": 41}
-{"time": 73441.04742647233, "event": "order_arrival", "oid": 34}
-{"time": 75102.16101896799, "event": "order_arrival", "oid": 47}
-{"time": 76550.12606425528, "event": "order_arrival", "oid": 46}
-{"time": 81406.56474690184, "event": "order_arrival", "oid": 20}
-{"time": 84010.0333538461, "event": "order_arrival", "oid": 0}
+{"time": 1360.52003695165, "event": "order_arrival", "oid": 9}
+{"time": 1986.7782277525573, "event": "order_arrival", "oid": 4}
+{"time": 4840.465703688552, "event": "order_arrival", "oid": 1}
+{"time": 11125.9898099272, "event": "order_arrival", "oid": 5}
+{"time": 19765.023015218056, "event": "order_arrival", "oid": 0}
+{"time": 19800.0, "event": "assigned", "vid": 0, "oid": 0, "eta": 1655.8007894786238}
+{"time": 21455.800789478624, "event": "pickup", "vid": 0, "oid": 0, "wait": 1690.7777742605685, "trip_eta": 2473.3109887246706}
+{"time": 24870.783143784614, "event": "order_arrival", "oid": 8}
+{"time": 24900.0, "event": "assigned", "vid": 1, "oid": 8, "eta": 559.6580103383011}
+{"time": 25459.658010338302, "event": "pickup", "vid": 1, "oid": 8, "wait": 588.8748665536878, "trip_eta": 4582.171577451224}
+{"time": 29023.56036601584, "event": "order_arrival", "oid": 6}
+{"time": 32139.520549522444, "event": "order_arrival", "oid": 16}
+{"time": 33952.34464839019, "event": "order_arrival", "oid": 18}
+{"time": 33960.0, "event": "assigned", "vid": 4, "oid": 18, "eta": 1276.4816208538998}
+{"time": 34498.67653852326, "event": "order_arrival", "oid": 17}
+{"time": 34500.0, "event": "assigned", "vid": 2, "oid": 17, "eta": 1761.3478332369666}
+{"time": 35236.4816208539, "event": "pickup", "vid": 4, "oid": 18, "wait": 1284.1369724637043, "trip_eta": 8832.089615768655}
+{"time": 36261.34783323696, "event": "pickup", "vid": 2, "oid": 17, "wait": 1762.6712947137057, "trip_eta": 5033.245962724661}
+{"time": 45025.41999053636, "event": "order_arrival", "oid": 12}
+{"time": 50190.9733929187, "event": "order_arrival", "oid": 19}
+{"time": 60700.17349352234, "event": "order_arrival", "oid": 7}
+{"time": 62733.084823394616, "event": "order_arrival", "oid": 3}
+{"time": 62760.0, "event": "assigned", "vid": 3, "oid": 3, "eta": 368.89374806568895}
+{"time": 63128.89374806569, "event": "pickup", "vid": 3, "oid": 3, "wait": 395.8089246710733, "trip_eta": 2763.514082407329}
+{"time": 63561.093272111655, "event": "order_arrival", "oid": 10}
+{"time": 71738.38061039172, "event": "order_arrival", "oid": 13}
+{"time": 72195.41757038985, "event": "order_arrival", "oid": 2}
+{"time": 75023.50014648194, "event": "order_arrival", "oid": 11}
+{"time": 79633.22961137604, "event": "order_arrival", "oid": 15}
+{"time": 85148.03705435785, "event": "order_arrival", "oid": 14}

@@ -80,9 +80,9 @@ class Simulator:
                 idle_vehicles = [v for v in self.vehicles if v.state == VehicleState.IDLE and v.available_at <= self.time and v.online]
                 if pending_orders and idle_vehicles:
                     if strategy == 'km':
-                        pairs = km_match(idle_vehicles, pending_orders, max_distance_km=max_dist)
+                        pairs = km_match(idle_vehicles, pending_orders, current_time=self.time, max_distance_km=max_dist)
                     else:
-                        pairs = nearest_match(idle_vehicles, pending_orders, max_distance_km=max_dist)
+                        pairs = nearest_match(idle_vehicles, pending_orders, current_time=self.time, max_distance_km=max_dist)
                     for vi_idx, oi_idx in pairs:
                         v = idle_vehicles[vi_idx]
                         o = pending_orders[oi_idx]
@@ -92,10 +92,16 @@ class Simulator:
                         # mark order as being picked up
                         o.state = OrderState.BEING_PICKED_UP
                         o.assigned_vid = v.vid
-                        # schedule pickup arrival event
-                        dist = euclidean_distance_km(v.x, v.y, o.x_from, o.y_from)
+                        # schedule pickup arrival event using vehicle's current position at this time
+                        vx, vy = v.position_at(self.time)
+                        dist = euclidean_distance_km(vx, vy, o.x_from, o.y_from)
                         tt = travel_time_seconds(dist, v.speed_kmph)
                         pickup_time = self.time + tt
+                        # set vehicle movement to pickup
+                        v.move_start_time = self.time
+                        v.move_end_time = pickup_time
+                        v.move_start_x, v.move_start_y = vx, vy
+                        v.move_end_x, v.move_end_y = o.x_from, o.y_from
                         self._push_event(pickup_time, ('pickup', o.oid))
                         self.log_event({'time': self.time, 'event': 'assigned', 'vid': v.vid, 'oid': o.oid, 'eta': tt})
                 # schedule next dispatch
@@ -107,15 +113,20 @@ class Simulator:
                 v = self._find_vehicle_by_vid(o.assigned_vid)
                 if v is None:
                     continue
-                # vehicle arrives at pickup: update states
+                # vehicle arrives at pickup: update states and start moving to dropoff
                 o.pickup_time = self.time
+                # ensure vehicle position is set to pickup point
                 v.x, v.y = o.x_from, o.y_from
                 v.state = VehicleState.TO_DROPOFF
                 o.state = OrderState.BEING_DROPPED_OFF
-                # schedule completion
+                # schedule completion and set movement to dropoff
                 trip_dist = euclidean_distance_km(o.x_from, o.y_from, o.x_to, o.y_to)
                 trip_tt = travel_time_seconds(trip_dist, v.speed_kmph)
                 complete_time = self.time + trip_tt
+                v.move_start_time = self.time
+                v.move_end_time = complete_time
+                v.move_start_x, v.move_start_y = o.x_from, o.y_from
+                v.move_end_x, v.move_end_y = o.x_to, o.y_to
                 self._push_event(complete_time, ('complete', o.oid))
                 # record waiting time metric
                 wait = o.pickup_time - o.request_time
@@ -129,8 +140,14 @@ class Simulator:
                 o.complete_time = self.time
                 o.state = OrderState.COMPLETED
                 if v:
-                    # move vehicle to dropoff point and free it
+                    # finalize vehicle position at dropoff and free it
                     v.x, v.y = o.x_to, o.y_to
+                    v.move_start_time = None
+                    v.move_end_time = None
+                    v.move_start_x = None
+                    v.move_start_y = None
+                    v.move_end_x = None
+                    v.move_end_y = None
                     v.state = VehicleState.IDLE
                     v.target_order_id = None
                     v.available_at = self.time
